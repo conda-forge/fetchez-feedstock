@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fetchez
-  version: "0.4.0"
+  version: "0.4.2"
 
 package:
   name: ${{ name | lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 3440e49ad809a1e176fc2d986386dcf4048074876fc92c2189ac4dd9895b04c5
+  sha256: f47e2424000e6406cf0d38c95920cf22d639de2513d414e31e2b65f505e1cb1b
 
 build:
   number: 0
@@ -23,7 +23,8 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools >=45
+    - hatchling >=1.5.0
+    - hatch-vcs
     - wheel
     - pip
   run:
@@ -32,6 +33,7 @@ requirements:
     - lxml
     - tqdm
     - shapely
+    - pyyaml
 
 tests:
   - python:
