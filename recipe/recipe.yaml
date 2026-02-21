@@ -33,6 +33,7 @@ requirements:
     - lxml
     - tqdm
     - shapely
+    - pyyaml
 
 tests:
   - python:
