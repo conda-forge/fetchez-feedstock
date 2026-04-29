@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fetchez
-  version: "0.5.6"
+  version: "0.6.0"
   python_min: "3.12"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 3ec0fc8e3739da8d0df1eb05040c45df1ec862c8bd0e472069eba83a26348618
+  sha256: d6200fa3477ae6220756256eda4f8831981be41c7d1b7bede1d5c65f3630b68f
 
 build:
   number: 0
@@ -19,7 +19,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
-      - fetchez = fetchez.cli:fetchez_cli
+      - fetchez = fetchez.cli:cli
 
 requirements:
   host:
@@ -35,6 +35,7 @@ requirements:
     - tqdm
     - shapely
     - pyyaml
+    - click
 
 tests:
   - python:
@@ -44,7 +45,7 @@ tests:
         - fetchez
   - script:
       - fetchez --help
-      - fetchez --modules
+      - fetchez modules list
     requirements:
       run:
         - python ${{ python_min }}.*
