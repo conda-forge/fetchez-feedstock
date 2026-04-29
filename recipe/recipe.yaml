@@ -19,7 +19,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
-      - fetchez = fetchez.cli:fetchez_cli
+      - fetchez = fetchez.cli:cli
 
 requirements:
   host:
@@ -45,7 +45,7 @@ tests:
         - fetchez
   - script:
       - fetchez --help
-      - fetchez --modules
+      - fetchez modules list
     requirements:
       run:
         - python ${{ python_min }}.*
