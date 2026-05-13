@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fetchez
-  version: "0.6.3"
+  version: "0.6.4"
   python_min: "3.12"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: f538558b890d257cac7e447e8b1671f3746460a1281e10349cbcc42b8d161f6e
+  sha256: 1877dc4283b351cf2534ee37cf8cc23ce802c91edc829e7554318d66acac33f5
 
 build:
   number: 0
