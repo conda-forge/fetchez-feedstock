@@ -16,7 +16,7 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  number: ${{ build_number}
+  number: ${{ build_number }}
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
