@@ -2,8 +2,10 @@ schema_version: 1
 
 context:
   name: fetchez
-  version: "NEXT"
   python_min: "3.12"
+  version: "NEXT"
+  build_number: 0
+  sha256: "TODO"
 
 package:
   name: ${{ name | lower }}
@@ -11,10 +13,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: "TODO"
+  sha256: ${{ sha256 }}
 
 build:
-  number: 0
+  number: ${{ build_number}
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
