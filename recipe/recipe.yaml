@@ -5,7 +5,7 @@ context:
   python_min: "3.12"
   version: "NEXT"
   build_number: 0
-  sha256: "TODO"
+  sha256: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
 package:
   name: ${{ name | lower }}
