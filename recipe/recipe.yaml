@@ -5,7 +5,7 @@ context:
   python_min: "3.12"
   version: "0.6.11"
   build_number: 0
-  sha256: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  sha256: "3204dd881558b230195e3a1f442dd2b7ab361aaf366d310aa4e60bf3c1f22ca9"
 
 package:
   name: ${{ name | lower }}
