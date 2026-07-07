@@ -2,8 +2,10 @@ schema_version: 1
 
 context:
   name: fetchez
-  version: "0.6.10"
   python_min: "3.12"
+  version: "0.6.11"
+  build_number: 0
+  sha256: "3204dd881558b230195e3a1f442dd2b7ab361aaf366d310aa4e60bf3c1f22ca9"
 
 package:
   name: ${{ name | lower }}
@@ -11,10 +13,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: ae0c120dcd734892c24451cc439f8ab911fe93f3403db0c946073347e9c48e73
+  sha256: ${{ sha256 }}
 
 build:
-  number: 0
+  number: ${{ build_number }}
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -39,7 +41,9 @@ requirements:
 
 tests:
   - python:
-      python_version: "${{ python_min }}.*"
+      python_version:
+        - "${{ python_min }}.*"
+        - "*"
       pip_check: true
       imports:
         - fetchez
