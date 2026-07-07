@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: fetchez
   python_min: "3.12"
-  version: "NEXT"
+  version: "0.6.11"
   build_number: 0
   sha256: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
