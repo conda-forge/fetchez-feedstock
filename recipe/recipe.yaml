@@ -3,9 +3,9 @@ schema_version: 1
 context:
   name: fetchez
   python_min: "3.12"
-  version: "0.6.11"
+  version: "0.6.12"
   build_number: 0
-  sha256: "3204dd881558b230195e3a1f442dd2b7ab361aaf366d310aa4e60bf3c1f22ca9"
+  sha256: "c8f8ecff7a3ed4dde2a86871d228c5cf4aa3282fa0826db17394dd660d3efcad"
 
 package:
   name: ${{ name | lower }}
