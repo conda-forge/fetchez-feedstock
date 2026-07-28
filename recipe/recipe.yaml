@@ -38,6 +38,8 @@ requirements:
     - shapely
     - pyyaml
     - click
+    - pyproj
+    - pyogrio
 
 tests:
   - python:
