@@ -40,6 +40,7 @@ requirements:
     - click
     - pyproj
     - pyogrio
+    - filelock
 
 tests:
   - python:
