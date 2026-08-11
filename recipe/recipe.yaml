@@ -4,7 +4,7 @@ context:
   name: fetchez
   python_min: "3.12"
   version: "0.8.2"
-  build_number: 0
+  build_number: 1
   sha256: "0c0308e01e6cee1d02f3a6b36d234742108ac96e0f0285d27bc82a83b42824e6"
 
 package:
@@ -41,6 +41,9 @@ requirements:
     - pyproj
     - pyogrio
     - filelock
+    - mercantile
+    - boto3
+    - copernicusmarine
 
 tests:
   - python:
