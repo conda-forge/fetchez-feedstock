@@ -41,6 +41,9 @@ requirements:
     - pyproj
     - pyogrio
     - filelock
+    - mercantile
+    - boto3
+    - copernicusmarine
 
 tests:
   - python:
