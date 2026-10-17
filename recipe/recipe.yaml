@@ -32,15 +32,15 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - requests
-    - lxml
-    - tqdm
-    - shapely
-    - pyyaml
-    - click
-    - pyproj
-    - pyogrio
-    - filelock
+    - requests >=2.31.0
+    - lxml >=4.9.3
+    - tqdm >=4.66.0
+    - shapely >=2.0.3
+    - pyyaml >=6.0.1
+    - click >=8.1.7
+    - pyproj >=3.6.1
+    - pyogrio >=0.8.0
+    - filelock >=3.12.4
     - mercantile
     - boto3
     - copernicusmarine
